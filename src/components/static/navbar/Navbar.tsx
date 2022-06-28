@@ -7,8 +7,8 @@ function Navbar() {
             <AppBar position="static">
                 <Toolbar variant="dense">
                     <Box style={{ cursor: "pointer" }} >
-                        <Typography variant="h5" color="inherit">
-                            Blog Pessoal
+                        <Typography variant="h4" color="inherit">
+                            Andrei's Spot
                         </Typography>
                     </Box>
 
