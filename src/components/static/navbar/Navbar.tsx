@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography,Grid } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Grid } from '@material-ui/core';
 import { Box } from '@mui/material';
+import {Link} from 'react-router-dom';
 import "./Navbar.css";
 function Navbar() {
     return (
@@ -35,11 +36,13 @@ function Navbar() {
                                     Add Subject
                                 </Typography>
                             </Box>
-                            <Box className="MenuPagesBox">
-                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
-                                    Logout
-                                </Typography>
-                            </Box>
+                            <Link to='/login' className='text-decorator-none'>
+                                <Box className="MenuPagesBox">
+                                    <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                        Logout
+                                    </Typography>
+                                </Box>
+                            </Link>
                         </Box>
                     </Grid>
                 </Toolbar>
