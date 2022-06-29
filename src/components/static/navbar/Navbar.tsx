@@ -1,44 +1,47 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography,Grid } from '@material-ui/core';
 import { Box } from '@mui/material';
+import "./Navbar.css";
 function Navbar() {
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense">
-                    <Box style={{ cursor: "pointer" }} >
-                        <Typography variant="h4" color="inherit">
-                            Andrei's Spot
-                        </Typography>
-                    </Box>
+            <AppBar position="static" >
+                <Toolbar variant="dense" className="Menu">
+                    <Grid container justifyContent="space-between">
+                        <Box style={{ cursor: "pointer" }} >
+                            <Typography variant="h3" color="inherit" className="BlogTitle">
+                                ANDREI'S SPOT
+                            </Typography>
+                        </Box>
 
-                    <Box display="flex" justifyContent="start">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Home
-                            </Typography>
+                        <Box display="flex" justifyContent="space-around">
+                            <Box className="MenuPagesBox">
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Home
+                                </Typography>
+                            </Box>
+                            <Box className="MenuPagesBox">
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Posts
+                                </Typography>
+                            </Box>
+                            <Box className="MenuPagesBox">
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Subjects
+                                </Typography>
+                            </Box>
+                            <Box className="MenuPagesBox">
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Add Subject
+                                </Typography>
+                            </Box>
+                            <Box className="MenuPagesBox">
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Logout
+                                </Typography>
+                            </Box>
                         </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Posts
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Subjects
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Add Subject
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                Logout
-                            </Typography>
-                        </Box>
-                    </Box>
+                    </Grid>
                 </Toolbar>
             </AppBar>
         </>
