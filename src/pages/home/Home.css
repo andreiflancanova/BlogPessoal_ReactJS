@@ -1,18 +1,18 @@
-body{
-    padding:0;
-    margin:0;
-    font-family: 'Roboto',sans-serif;
-  }
-
-.Titulo{
-    color: #2e86de;
-    text-align: center;
+.GridStyling{
+    background-color: white;
 }
 
-.img{
-    width:400px;
-    height:400px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
+.TypographyStyling{
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.Button{
+    border-color: white;
+    background-color: #2e86de !important;
+    color: white !important;
+}
+
+.Postagens{
+    background-color: white;
 }
