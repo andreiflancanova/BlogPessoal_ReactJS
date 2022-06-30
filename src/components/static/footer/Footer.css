@@ -7,3 +7,22 @@ a:hover {
 a:active {
 	text-decoration: none
 	}
+
+.box1{
+	background-color:#2e86de;
+	height: 130px;
+}
+
+.box2{
+	background-color: #2e86de;
+	height: 40px;
+}
+
+.social{
+	font-size: 60px;
+	color: white;
+}
+
+.textFormatting{
+	color: white;
+}
