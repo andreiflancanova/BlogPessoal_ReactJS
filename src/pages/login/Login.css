@@ -1,12 +1,14 @@
-.texts{
-font-weight: bold !important;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.textsLogin{
+font-family: 'Bebas Neue' !important;
 }
 
 .text-decorator-none{
     text-decoration: none;
 }
 
-.background{
+.backgroundLogin{
         background-image: url(https://foyr.com/learn/wp-content/uploads/2021/08/modern-office-design.png);
         background-repeat:no-repeat;
         width:100vh;

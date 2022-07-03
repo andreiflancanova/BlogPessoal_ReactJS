@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.backgroundCadastroUsuario{
+    background-image: url(https://foyr.com/learn/wp-content/uploads/2021/08/modern-office-design.png);
+    background-repeat:no-repeat;
+    width:100vh;
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.ButtonFormatting{
+    text-decoration: none;
+    margin: 10px !important;
+}
+
+.textsCadastro{
+    font-family: 'Bebas Neue' !important;
+    }
