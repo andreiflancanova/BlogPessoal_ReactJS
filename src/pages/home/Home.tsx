@@ -3,6 +3,7 @@ import{Grid,Button,Typography} from "@material-ui/core"
 import { Box } from "@mui/material"
 
 import "./Home.css";
+import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 function Home() {
     return (
         <>
@@ -22,6 +23,7 @@ function Home() {
                     <img src="https://cdn.create.vista.com/api/media/medium/221706396/stock-photo-cup-coffee-laptop-program-code?token=" alt="" width="100%" height="500px" />
                 </Grid>
                 <Grid xs={12} className="Postagens">
+                    <TabPostagem />
                 </Grid>
             </Grid>
         </>
