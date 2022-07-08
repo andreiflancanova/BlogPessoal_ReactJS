@@ -28,7 +28,6 @@ function ListaTema() {
     })
   }
 
-
   useEffect(()=>{
     getTema()
   }, [temas.length])
