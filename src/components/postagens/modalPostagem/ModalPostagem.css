@@ -1,0 +1,9 @@
+.cursor{
+    cursor: pointer;
+}
+
+.ButtonNewPosts{
+    border-color: white;
+    background-color: #af2747 !important;
+    color: white !important;
+}

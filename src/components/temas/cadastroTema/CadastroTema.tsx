@@ -11,7 +11,6 @@ function CadastroTema() {
     let navigate=useNavigate();
     const {id} =useParams<{id:string}>();
     const [token,setToken]=useLocalStorage('token');
-
     const [tema,setTema]=useState<Tema>({
         id:0,
         descricao:''
