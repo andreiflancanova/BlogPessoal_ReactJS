@@ -9,20 +9,22 @@ import { useDispatch } from "react-redux";
 import { addToken } from '../../../store/tokens/actions';
 function Navbar() {
 
-    const token= useSelector<TokenState,TokenState["tokens"]>(
-    (state) => state.tokens
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
     );
     let navigate = useNavigate();
     const dispatch = useDispatch();
 
-    function goLogout(){
+    function goLogout() {
         dispatch(addToken(''));
         alert("Usuário deslogado")
         navigate("/login")
     }
 
-    return (
-        <>
+    var navbarComponent;
+
+    if (token != "") {
+        navbarComponent =
             <AppBar position="static" >
                 <Toolbar variant="dense" className="Menu">
                     <Grid container justifyContent="space-between">
@@ -54,7 +56,7 @@ function Navbar() {
                                     </Typography>
                                 </Box>
                             </Link>
-                           <Link to='/formularioTema'>
+                            <Link to='/formularioTema'>
                                 <Box className="MenuPagesBox">
                                     <Typography variant="h6" color="inherit" className="MenuPagesFont">
                                         Add Subject
@@ -62,15 +64,20 @@ function Navbar() {
                                 </Box>
                             </Link>
 
-                                <Box className="MenuPagesBox" onClick={goLogout}>
-                                    <Typography variant="h6" color="inherit" className="MenuPagesFont">
-                                        Logout
-                                    </Typography>
-                                </Box>
+                            <Box className="MenuPagesBox" onClick={goLogout}>
+                                <Typography variant="h6" color="inherit" className="MenuPagesFont">
+                                    Logout
+                                </Typography>
+                            </Box>
                         </Box>
                     </Grid>
                 </Toolbar>
             </AppBar>
+    }
+
+    return (
+        <>
+            {navbarComponent}
         </>
     )
 }
