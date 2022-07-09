@@ -5,14 +5,16 @@ import React, {useState,useEffect,ChangeEvent} from "react";
 import { Typography, Grid, TextField } from '@material-ui/core';
 import { Box, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import {login} from '../../services/Service';
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
 
 function Login() {
     let navigate = useNavigate();
-    const [token,setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token,setToken] = useState('');
     const [userLogin, setUserLogin] = useState<UserLogin>(
     /*  userLogin é um componente
         setUserLogin é uma função que servirá para alterar esse
@@ -50,6 +52,7 @@ function Login() {
             useEffect(()=>{
                 if(token !==''){
                     navigate('/home')
+                    dispatch(addToken(token))
                 }
             },[token])
             /* É responsável pelo controle do ciclo de vida de um componente  */
