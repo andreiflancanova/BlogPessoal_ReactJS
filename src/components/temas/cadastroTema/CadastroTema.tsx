@@ -7,6 +7,7 @@ import { useNavigate,useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function CadastroTema() {
     let navigate=useNavigate();
@@ -21,8 +22,17 @@ function CadastroTema() {
   
     // useEffect para monitorar o token
     useEffect(()=>{
-        if(token == ''){
-          alert("Você precisa estar logado")
+        if(token === ''){
+            toast.error('Você precisa estar logado',{
+                position:"top-right",
+                autoClose:2000,
+                hideProgressBar:false,
+                closeOnClick:true,
+                pauseOnHover:false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
           navigate("/login")
         }
       }, [token])
@@ -62,14 +72,32 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            alert('Tema atualizado com sucesso');
+            toast.success('Tema atualizado com sucesso',{
+                position:"top-right",
+                autoClose:2000,
+                hideProgressBar:false,
+                closeOnClick:true,
+                pauseOnHover:false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
         } else {
             post(`/tema`, tema, setTema, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Tema cadastrado com sucesso');
+            toast.success('Tema cadastrado com sucesso',{
+                position:"top-right",
+                autoClose:2000,
+                hideProgressBar:false,
+                closeOnClick:true,
+                pauseOnHover:false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
         }
         back()
     }

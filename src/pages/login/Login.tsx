@@ -10,6 +10,7 @@ import UserLogin from "../../models/UserLogin";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Login() {
     let navigate = useNavigate();
@@ -65,9 +66,27 @@ function Login() {
                 console.log('userLogin: '+ Object.values(userLogin));*/
             try{ 
                 await login(`/usuarios/logar`,userLogin,setToken)
-                alert('Usuário logado com sucesso!')
+                toast.success('Usuário logado com sucesso!',{
+                    position:"top-right",
+                    autoClose:2000,
+                    hideProgressBar:false,
+                    closeOnClick:true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                })
             } catch(error){
-                alert('Dados incorretos. Erro ao logar!');
+                toast.error('Dados incorretos. Erro ao logar!',{
+                    position:"top-right",
+                    autoClose:2000,
+                    hideProgressBar:false,
+                    closeOnClick:true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                })
             }
         }
 
