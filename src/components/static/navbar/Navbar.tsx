@@ -41,7 +41,7 @@ function Navbar() {
                     <Grid container justifyContent="space-between">
                         <Box style={{ cursor: "pointer" }} >
                             <Typography variant="h3" color="inherit" className="BlogTitle">
-                                ANDREI'S SPOT
+                                MY THOUGHTS
                             </Typography>
                         </Box>
 
