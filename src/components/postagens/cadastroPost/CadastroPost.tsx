@@ -3,7 +3,7 @@ import { Container, Typography, TextField, Select, InputLabel, MenuItem, FormCon
 import './CadastroPost.css';
 import {Button } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import Tema from '../../../models/Tema';
+import Tema from './../../../models/Tema';
 import { useSelector } from 'react-redux';
 import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
