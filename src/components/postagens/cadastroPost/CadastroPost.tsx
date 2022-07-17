@@ -10,6 +10,7 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
+
 function CadastroPost() {
     let navigate=useNavigate();
     const {id} =useParams<{id:string}>();
